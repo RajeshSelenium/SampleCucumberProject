@@ -21,17 +21,36 @@ public class LoginSteps {
 		WebDriverManager.chromedriver().setup();
 		driver=new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/");
+		driver.manage().window().maximize();
 		
 	//	 throw new io.cucumber.java.PendingException();
 	}
 	
-	@When("user enters the username and password")
-	public void user_enters_username_and_password()
-	{
-		System.out.println("Step 2 : User enters the username and password");
-		driver.findElement(By.id("txtUsername")).sendKeys("Admin");
-		driver.findElement(By.id("txtPassword")).sendKeys("admin123");
-		
+	/*
+	 * @When("user enters the username and password") public void
+	 * user_enters_username_and_password() {
+	 * System.out.println("Step 2 : User enters the username and password");
+	 * driver.findElement(By.id("txtUsername")).sendKeys("Admin");
+	 * driver.findElement(By.id("txtPassword")).sendKeys("admin123");
+	 * 
+	 * }
+	 */	
+	/*
+	 * @When("^user enters the \"(.*)\" and \"(.*)\"$")
+	 * 
+	 * public void user_enters_username_and_password(String uname,String Password) {
+	 * System.out.println("Step 2 : User enters username and password");
+	 * driver.findElement(By.id("txtUsername")).sendKeys(uname);
+	 * driver.findElement(By.id("txtPassword")).sendKeys(Password);
+	 * 
+	 * }
+	 */
+	@When("^user enters the (.*) and (.*)$")
+	public void user_enters_username_and_password(String uname,String Password) {
+	
+		System.out.println("Step 2 : User enters username and password");
+		  driver.findElement(By.id("txtUsername")).sendKeys(uname);
+		  driver.findElement(By.id("txtPassword")).sendKeys(Password);
 	}
 	
 	@And("click on login button")
@@ -41,9 +60,9 @@ public class LoginSteps {
 		driver.findElement(By.name("Submit")).click();
 	}
 	
-	/*
-	 * @Then("user should land on home page") public void user_lands_on_home_page()
-	 * { System.out.println("Step 4 : User lands on home page"); driver.close(); }
-	 */
+	
+	  @Then("user should land on home page") public void user_lands_on_home_page()
+	  { System.out.println("Step 4 : User lands on home page"); driver.close(); }
+	 
 
 }

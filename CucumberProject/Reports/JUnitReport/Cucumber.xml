@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="2" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="39.729">
-    <testcase classname="Test the login Functionality of OrangeHRM" name="The the Valid Login1" time="20.688">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="27.474">
+    <testcase classname="Test the login Functionality of OrangeHRM" name="The the Valid Login22" time="10.739">
+        <system-out>
             <![CDATA[Given user is on loginPage..................................................passed
-When user enters the username and password..................................passed
+When user enters the "admin" and "admin123".................................passed
 And click on login button...................................................passed
-Then user should land on home page..........................................undefined
+Then user should land on home page..........................................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
-    <testcase classname="Test the login Functionality of OrangeHRM" name="The the Valid Login2" time="18.78">
-        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception">
+    <testcase classname="Test the login Functionality of OrangeHRM" name="Test the valid login" time="7.88">
+        <system-out>
             <![CDATA[Given user is on loginPage..................................................passed
-When user enters the username and password..................................passed
+When user enters the admin and admin123.....................................passed
 And click on login button...................................................passed
-Then user should land on home page..........................................undefined
+Then user should land on home page..........................................passed
 ]]>
-        </failure>
+        </system-out>
+    </testcase>
+    <testcase classname="Test the login Functionality of OrangeHRM" name="Test the valid login 2" time="8.56">
+        <system-out>
+            <![CDATA[Given user is on loginPage..................................................passed
+When user enters the admin2 and admin1234...................................passed
+And click on login button...................................................passed
+Then user should land on home page..........................................passed
+]]>
+        </system-out>
     </testcase>
 </testsuite>
